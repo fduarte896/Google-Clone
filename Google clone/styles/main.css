@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: end;
+}
+
+header nav .nav-right-section{
+    width: 250px;
+    /* El height va automático para que tome la altura del padre y así no sea de una altura mayor que este. */
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-right-section a{
+    margin-right: 10px;
+    color: #000000;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url(./Images/baseline_apps_black_24dp.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /*Este hace que la imagen intente ajustarse al tamaño del contenedor*/
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main{
+    height: calc(100vh - 60px - 94px - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 272px;
+    margin: 0 auto; /*Este auto permite que el margin de los laterales se divida en la mitad para la izquierda y la mitad para la derecha*/
+}
+.in-blank{
+    height: 120px;
+}
+
+.search-field{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 600px;
+    min-width: 46px;
+    border-radius: 50px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgba(193, 193, 193, 0.5);
+    margin: 24px 0;
+    height: 50px;
+
+}
+
+/* Con este pseudoelemento podemos darle estilos al contenedor una vez se haga hover sobre el contendor mismo. Entonces por dentro se pone el estilo que debe adquirir cuando se hace el hover. */
+.search-field:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+}
+
+main section .magnifying-glass{
+    background-image: url(./Images/search_black_24dp.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 100%;
+    margin-left: 16px;
+    color: #9aa0a6;
+}
+
+
+
+main section .right-icons{
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+
+main section div .mic{
+    background-image: url(./Images/google-voice.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 100%;
+    margin-right: 4px;
+}
+
+main section div .camera{
+    background-image: url(./Images/Google_Lens_Icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 100%;
+    margin-right: 16px;
+}
+
+main section div div{
+    
+    margin: 0px 8px;
+}
+
+.search-text{
+    width: calc(100% - 125px);
+    border: none;
+        /* Para eliminar el coloreado que sale cuando se hace click en el cuadro, se pone outline: none */
+        outline: none;
+    
+}
+
+.buttons{
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.buttons input{
+    background-color: rgba(193, 193, 193, 0.1);
+    border-radius: 4px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    min-width: 54px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 0px 4px;
+    font-family: Arial, sans-serif;
+}
+
+.buttons input:hover{
+    
+    box-shadow: 0 1px 1px 0 #20212447;
+}
+
+footer{
+    background-color: rgba(193, 193, 193, 0.2);
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: rgb(105, 105, 105);
+    width: 100%;
+}
+
+.first-floor{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 50%;
+    border-bottom: 1px rgba(193, 193, 193, 0.2) solid;   
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 30px;
+    font-size: 15px;
+}
+
+
+
+.first-floor a{
+    padding: 14px;
+}
+
+.second-floor{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 50%;
+    padding: 0px 30px;
+}
+
+.second-floor .first-list, .second-list{
+    margin: 0;
+}
+
+.second-floor a{
+    padding: 15px
+}
+
+footer .country{
+    width: 100%;
+
+}
+
+footer .first-list{
+    display: flex;
+    padding: 0;
+}
+
+footer .second-list{
+    display: flex;
+    padding: 0;
+}
+
+footer ul li{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(141, 138, 138);
+}
